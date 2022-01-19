@@ -1,5 +1,5 @@
 pytest
+allure-pytest
 requests
 loguru
 jmespath
-allure-pytest
