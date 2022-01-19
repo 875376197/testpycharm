@@ -4,3 +4,4 @@ report
 result
 venv
 main.py
+__pycache__
