@@ -1,0 +1,6 @@
+.pytest_cache
+.idea
+report
+result
+venv
+main.py
