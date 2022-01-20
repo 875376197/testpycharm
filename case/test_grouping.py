@@ -22,7 +22,7 @@ class TestGrouping:
     @pytest.mark.parametrize("a,check", [("中文", 200), ("tay", 200), ("123", 200)], ids=["chin", "english", "int"])
     def test_add_group(self, a, check):
         r = self.group.add_group(a)
-        assert r.status_code == check
+        assert r.status_code == 30
 
     #     todo:公司分组名称添加公司
 

@@ -6,9 +6,8 @@ import requests
 
 class DingRobot:
     def __init__(self):
-        self.allure = "http://jenkisn5:123456@8.129.214.240:9000/job/wework/allure/widgets/suites.json"
-        self.ding = 'https://oapi.dingtalk.com/robot/send?access_token=' \
-                    'a5eb6e38be242dcf3a0ceaa1035a8c3093430de8da7384bf0b710711d4885c49'
+        self.allure = "http://admin:Aa123456@39.105.54.35:3000/job/郑嘉仪/21/allure/widgets/suites.json"
+        self.ding = 'https://oapi.dingtalk.com/robot/send?access_token=c28b8986df2572e30066f931fb688073724996b58e5c15363d064497a85054bc'
         self.error = self.get_allure_error()
 
     def get_allure_error(self):
@@ -22,10 +21,10 @@ class DingRobot:
             content = {
                 "msgtype": "link",
                 "link": {
-                    "text": "账号jenkisn5,密码123456",
-                    "title": "猛犸象" + datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
+                    "text": "账号admin,密码Aa123456",
+                    "title": "!" + datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
                     "picUrl": "",
-                    "messageUrl": "http://jenkisn5:123456@8.129.214.240:9000/job/wework/allure/"
+                    "messageUrl": "http://admin:Aa123456@39.105.54.35:3000/job/郑嘉仪/21/allure"
                 }
             }
             response = requests.post(self.ding, headers=headers, data=json.dumps(content))
